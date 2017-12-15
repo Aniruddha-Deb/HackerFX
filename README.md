@@ -1,7 +1,7 @@
 # HackerFX
 recreate a bitmap image using zeroes and ones
 
-![deb](hackerfx_img.jpg)
+![deb](hackerfx_img.png)
 
 This is a small script that reads from a bitmap image of size 160x60 and writes a zero or one depending on whether the pixel is black or white. 
 

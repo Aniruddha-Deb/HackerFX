@@ -16,7 +16,7 @@ public class HackerFX {
 		
 		BufferedImage img = new BufferedImage( xWidth, yWidth, BufferedImage.TYPE_INT_RGB );
 		
-		BufferedImage inImg = ImageIO.read( HackerFX.class.getResource( "BG.png" ) );
+		BufferedImage inImg = ImageIO.read( new File( "/Users/Sensei/temp/AD_bg.png" ) );
 		Graphics g2d = img.getGraphics();
 		
 		g2d.setColor( Color.BLACK );
@@ -33,10 +33,7 @@ public class HackerFX {
 			numPxX = 0;
 			while( j < xWidth ) {
 				if( inImg.getRGB( numPxX, numPxY ) < -5 ) {
-					g2d.drawString( "1", j, i );					
-				}
-				else {
-					g2d.drawString( "0", j, i );										
+					g2d.drawString( (int)Math.round( Math.random() )+"" , j, i );					
 				}
 				j += (fontSize*2/3);
 				numPxX++;
@@ -47,6 +44,6 @@ public class HackerFX {
 		
 		System.out.println( numPxX + " by " + numPxY );
 		
-		ImageIO.write( img, "jpg", new File( "hackerfx_img.jpg" ) );
+		ImageIO.write( img, "png", new File( "hackerfx_img.png" ) );
  	}
 }
