@@ -16,7 +16,7 @@ public class HackerFX {
 		
 		BufferedImage img = new BufferedImage( xWidth, yWidth, BufferedImage.TYPE_INT_RGB );
 		
-		BufferedImage inImg = ImageIO.read( new File( "/Users/Sensei/temp/AD_bg.png" ) );
+		BufferedImage inImg = ImageIO.read( HackerFX.class.getResource( "AD_bg.png" ) );
 		Graphics g2d = img.getGraphics();
 		
 		g2d.setColor( Color.BLACK );
