@@ -3,12 +3,30 @@ recreate a bitmap image using zeroes and ones
 
 ![deb](hackerfx_img.png)
 
-This is a small script that reads from a bitmap image of size 160x60 and writes a zero or one depending on whether the pixel is black or white. 
+This is a small script that reads from a specified bitmap image and writes a zero or one depending on whether the pixel is black or white. 
 
-Currently, this script is very rudimentary. It was created whimsically, just because I needed something good for my desktop background. For personal usage, the pattern on the bitmap needs to be changed. (make sure the pattern is monochrome, otherwise the script won't work)
+## Installation
+Packaging is currently a Work in progress. The best way to run this as of now is to download and compile HackerFX.java
+
+## Usage
+```
+Usage: 
+  hackerfx -i IN_FILE [-o OUT_FILE] [-s FONT_SIZE] [-f FG_COLOUR] [-b BG_COLOUR]
+  hackerfx -h | --help
+  hackerfx -v | -version
+
+Options:
+  -i IN_FILE    input file name
+  -o OUT_FILE   output file name [default: hackerfx_img.png]
+  -s FONT_SIZE  font size in pixels [default: 24]
+  -f FG_COLOUR  font colour in hex without alpha (eg. #33DD29) [default: #00FF00]
+  -b BG_COLOUR  background colour in hex without alpha (eg. #33DD29) [default: #000000]
+  -h --help     show this information
+  -v --version  show version information
+```
+
+## Changelog
+29 Jan 2018 -  Added command line arguments 
 
 ## Improvements
-
-* Refine the algorithm a little
-* Expand the charset of the program (octal? hex?) so that a greater number of colours can be expressed
-* add flexibility (ability to change bitmap size, image size, font, color, etc.)
+Improvements are tracked through the issues section. Have a suggestion for an improvement? Post an issue!
