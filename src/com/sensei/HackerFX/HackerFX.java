@@ -34,22 +34,6 @@ public class HackerFX {
 		saveImage( outImg );
 	}
 	
-	private String getStringParameter( String key ) {
-		return parsedArgs.get( key ).toString();
-	}
-	
-	private Color getColorParameter( String key ) throws NumberFormatException {
-		return Color.decode( getStringParameter( key ) );
-	}
-	
-	private int getIntegerParameter( String key ) throws NumberFormatException {
-		return Integer.parseInt( getStringParameter( key ) );
-	}
-	
-	private void saveImage( BufferedImage i ) throws IOException {
-		ImageIO.write( i, "png", new File( getStringParameter( OUTPUT_IMG ) ) );		
-	}
-	
 	private Map<String, Object> getArguments( String[] args ) {
 		Docopt docopt = new Docopt( HackerFX.class.getResourceAsStream( 
 				"/docopt_help_string.txt" ) );
@@ -60,10 +44,10 @@ public class HackerFX {
 		fontSize = getIntegerParameter( FONT_SIZE );		
 		inImg = ImageIO.read( 
 				              new File( getStringParameter( INPUT_IMG ) ) );
-		return generateImage( fontSize );
+		return generateImage();
 	}
 	
-	private BufferedImage generateImage( int fontSize ) {
+	private BufferedImage generateImage() {
 		
 		int charHeight = fontSize;
 		int charWidth = (fontSize*2)/3;
@@ -92,6 +76,24 @@ public class HackerFX {
 		}
 		
 		return generatedImage;
+	}
+
+	// Util methods
+	
+	private String getStringParameter( String key ) {
+		return parsedArgs.get( key ).toString();
+	}
+	
+	private Color getColorParameter( String key ) throws NumberFormatException {
+		return Color.decode( getStringParameter( key ) );
+	}
+	
+	private int getIntegerParameter( String key ) throws NumberFormatException {
+		return Integer.parseInt( getStringParameter( key ) );
+	}
+	
+	private void saveImage( BufferedImage i ) throws IOException {
+		ImageIO.write( i, "png", new File( getStringParameter( OUTPUT_IMG ) ) );		
 	}
 	
 	private String generateRandomBit() {
