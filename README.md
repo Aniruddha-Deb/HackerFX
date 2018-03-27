@@ -2,7 +2,7 @@
 recreate a bitmap image using zeroes and ones
 
 From
-![input](example_display.png)
+![input](example_img.png)
 to
 ![output](hackerfx_img.png)
 
