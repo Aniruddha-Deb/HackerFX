@@ -2,14 +2,17 @@
 recreate a bitmap image using zeroes and ones
 
 From
-![input](AD_bg.png)
+![input](example_display.png)
 to
 ![output](hackerfx_img.png)
 
 This is a small script that reads from a specified bitmap image and writes a zero or one depending on whether the pixel is black or white. 
 
 ## Installation
-Packaging is currently a Work in progress. The best way to run this as of now is to download and compile HackerFX.java
+```
+wget https://github.com/Aniruddha-Deb/HackerFX/releases/download/v.1.1.0/HackerFX.jar
+java -jar HackerFX.jar -h
+```
 
 ## Usage
 ```
@@ -29,7 +32,8 @@ Options:
 ```
 
 ## Changelog
-29 Jan 2018 -  Added command line arguments 
+29 Jan 2018 - Added command line arguments
+27 Mar 2018 - Packaged the app
 
 ## Improvements
 Improvements are tracked through the issues section. Have a suggestion for an improvement? Post an issue!
