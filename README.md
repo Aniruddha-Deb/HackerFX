@@ -2,8 +2,11 @@
 recreate a bitmap image using zeroes and ones
 
 From
-![input](example_img.png)
+
+![input](example_display.png)
+
 to
+
 ![output](hackerfx_img.png)
 
 This is a small script that reads from a specified bitmap image and writes a zero or one depending on whether the pixel is black or white. 
